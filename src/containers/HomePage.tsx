@@ -18,7 +18,7 @@ export const HomePage = ({ list: initialList }: { list: any }) => {
       desktopPageWidth="840px"
     >
       <Spacing size={12} />
-      <h1>Creco's item</h1>
+      <h1>Creco's Problem Solving</h1>
       <Spacing size={60} />
 
       <ul>
