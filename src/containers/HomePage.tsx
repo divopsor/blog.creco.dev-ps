@@ -36,10 +36,10 @@ export const HomePage = ({ list: initialList }: { list: any }) => {
                   textDecoration: 'unset',
                 }}
               >
-                <span style={{ fontSize: '1.2rem' }}>{item.category}</span>
+                <span style={{ lineHeight: '100%', fontSize: '1.2rem' }}>{item.category}</span>
                 <h3>{item.title}</h3>
                 <Spacing size={4} />
-                <span style={{ color: Colors.SoftGrey }}>{item.body.split('\n')[0]}</span>
+                <span style={{ lineHeight: '100%', color: Colors.SoftGrey }}>{item.body.split('\n')[0]}</span>
               </Link>
             </li>
           );
