@@ -1,15 +1,13 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { Colors, ResponsivePage, Spacing } from '@divops-packages/blog-creco-dev';
 import { usePss } from '../hooks/usePss';
 import Link from 'next/link';
 
 export const HomePage = ({ list: initialList }: { list: any }) => {
-  const router = useRouter();
-  const pss = usePss(initialList);
+  const list = usePss(initialList);
 
-  pss.sort((psA, psB) => psA.createdAt > psB.createdAt ? -1 : 1);
+  list.sort((psA, psB) => psA.createdAt > psB.createdAt ? -1 : 1);
 
   return (
     <ResponsivePage
@@ -24,7 +22,7 @@ export const HomePage = ({ list: initialList }: { list: any }) => {
 
       <ul>
       {
-        pss.map((item: any) => {
+        list.map((item: any) => {
           return (
             <li key={item.id} style={{ marginBottom: '48px' }}>
               <Link
